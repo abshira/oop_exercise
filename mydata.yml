@@ -1,4 +1,6 @@
-#structure similar to json
+--- 
+...
+e similar to json
 people:
   - fname: Joe
     surname: Bloggs
