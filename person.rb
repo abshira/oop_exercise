@@ -93,31 +93,26 @@ class AddressBook < Person
   end
 
 
-#  def load_yaml(file)
-#    data = YAML.load_file file
-#    array = data["people"]
-#    array.each do |person|
-#    end
+ def load_yaml(file)
+   data = YAML.load_file(file)
+   array = data["people"]
+   array.each do |person|
+   end
 
-#    person = Person.new person["fname"], person["surname"], person["dob"]
+   person = Person.new person["fname"], person["surname"], person["dob"]
 
-#    person["email"].each do |email|
-#      person.add_email email
-#    end
+   person["emails"].each do |email|
+     person.add_email email
+   end
 
-#    person["phone_numbers"].each do |phone|
-#      person.add_phone phone
-#    end
+   person["phones"].each do |phone|
+     person.add_phone phone
+    end
 
-#    @contact << person
+  @contact << person
 
-#  return self
-#  end
-
-#  File.open("mydata.yml", "r+") do |f|
-#    f.write(@contact.to_yaml)
-#  end
-#end
+  return self
+end
 #addressBook = AddressBook.new
 #addressBook.load_yaml 'mydata.yml'
 #addressbook.list

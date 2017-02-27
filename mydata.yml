@@ -1,7 +1,7 @@
---- 
+---
 ...
 e similar to json
-people:
+person:
   - fname: Joe
     surname: Bloggs
     dob: 1 Jan 1990
